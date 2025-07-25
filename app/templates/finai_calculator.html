@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}FinAI Calculator{% endblock %}
+{% block head_content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='calculator.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">FinAI Calculator</h2>
+    
+    <!-- Formula Selection -->
+    <div class="mb-4">
+        <div class="position-relative">
+            <input type="text" class="form-control" id="searchInput" placeholder="Search formula..."
+                onkeyup="filterDropdown()" onclick="showDropdown()">
+            <ul class="dropdown-menu" id="dropdownMenu">
+                <li><a class="dropdown-item" data-value="fv">Future Value (FV)</a></li>
+                <li><a class="dropdown-item" data-value="pv">Present Value (PV)</a></li>
+                <li><a class="dropdown-item" data-value="roi">Return on Investment (ROI)</a></li>
+                <li><a class="dropdown-item" data-value="cagr">Compound Annual Growth Rate (CAGR)</a></li>
+                <li><a class="dropdown-item" data-value="ratio">Current Ratio</a></li>
+                <li><a class="dropdown-item" data-value="loan">Loan Payment</a></li>
+                <li><a class="dropdown-item" data-value="simpleInterest">Simple Interest</a></li>
+                <li><a class="dropdown-item" data-value="breakEven">Break-Even Point</a></li>
+                <li><a class="dropdown-item" data-value="debtEquity">Debt to Equity Ratio</a></li>
+                <li><a class="dropdown-item" data-value="grossMargin">Gross Profit Margin</a></li>
+                <li><a class="dropdown-item" data-value="npv">Net Present Value (NPV)</a></li>
+                <li><a class="dropdown-item" data-value="peRatio">Price to Earnings Ratio (P/E)</a></li>
+                <li><a class="dropdown-item" data-value="dividendYield">Dividend Yield</a></li>
+                <li><a class="dropdown-item" data-value="assetTurnover">Asset Turnover Ratio</a></li>
+                <li><a class="dropdown-item" data-value="operatingMargin">Operating Margin</a></li>
+                <li><a class="dropdown-item" data-value="quickRatio">Quick Ratio</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Dynamic Input Fields -->
+    <div id="input-fields" class="mb-4">
+        <!-- Will be populated by JavaScript -->
+    </div>
+
+    <!-- Calculate Button -->
+    <button id="calculate-btn" class="btn btn-primary mb-4" style="display: none;">Calculate</button>
+
+    <!-- Result Display -->
+    <div id="result" class="result-card fade-in" style="display: none;">
+        <div class="card">
+            <div class="card-body text-center">
+                <h5 class="card-title mb-3">Result</h5>
+                <div class="result-content">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <span class="result-value"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formula Display -->
+    <div id="formula-display" class="mt-4" style="display: none;">
+        <div class="card formula-card">
+            <div class="card-body">
+                <h4 class="card-title mb-3">Formula:</h4>
+                <p id="formula-text" class="formula-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='calculator.js') }}"></script>
+{% endblock %}

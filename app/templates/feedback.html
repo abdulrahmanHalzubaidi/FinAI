@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Feedback - FinAI{% endblock %}
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title text-center">Feedback</h2>
+                <form method="POST" action="{{ url_for('feedback') }}" class="needs-validation">
+                    <!-- Request Type -->
+                    <div class="mb-3">
+                        <label for="request_type" class="form-label">Request Type</label>
+                        <select class="form-select" id="request_type" name="request_type" required>
+                            <option value="">Select...</option>
+                            <option value="bug_report">Bug Report</option>
+                            <option value="feature_request">Feature Request</option>
+                            <option value="Complaint">Complaint</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a request type.
+                        </div>
+                    </div>
+                    <!-- Title -->
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                        <div class="invalid-feedback">
+                            Title is required.
+                        </div>
+                    </div>
+                    <!-- Description -->
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+                        <div class="invalid-feedback">
+                            Description is required.
+                        </div>
+                    </div>
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary w-100">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

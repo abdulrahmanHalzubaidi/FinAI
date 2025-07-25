@@ -1,0 +1,226 @@
+.formula {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin: 1rem 0;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.formula-info {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.formula-info h4 {
+    color: #0d6efd;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+#formula-text {
+    color: #495057;
+    font-size: 1rem;
+}
+
+/* Style for variables and important terms */
+#formula-text strong {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+#search-results {
+    position: absolute;
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background: white;
+    z-index: 1000;
+}
+
+#search-results button {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+#search-results button:last-child {
+    border-bottom: none;
+}
+
+#search-results button:hover {
+    background-color: #f8f9fa;
+}
+
+#result {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    padding: 0.625rem 0.75rem;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+.btn-primary {
+    padding: 0.625rem 1.25rem;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+#formula-display {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+}
+.dropdown-menu {
+    display: none;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.dropdown-item {
+    cursor: pointer;
+    padding: 8px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Formula Card Styling */
+.formula-card {
+    background-color: #e8f4fd;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border-left: 4px solid #0d6efd;
+    margin-bottom: 1.5rem;
+}
+
+.formula-card .card-body {
+    padding: 1.5rem;
+}
+
+.formula-card .card-title {
+    color: #0d6efd;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.formula-text {
+    font-family: 'Courier New', monospace;
+    color: #212529;
+    line-height: 1.6;
+    white-space: pre-line;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .formula-card {
+        margin: 0 -1rem;
+        border-radius: 0;
+    }
+    
+    .formula-card .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Result Card Styling */
+.result-card {
+    margin-bottom: 1.5rem;
+}
+
+.result-card .card {
+    background-color: #d1e7dd;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.result-card .card-body {
+    padding: 1.5rem;
+}
+
+.result-card .card-title {
+    color: #0f5132;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.result-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.result-value {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #0f5132;
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .result-card {
+        margin: 0 -1rem 1.5rem;
+    }
+    
+    .result-card .card {
+        border-radius: 0;
+    }
+    
+    .result-card .card-body {
+        padding: 1rem;
+    }
+    
+    .result-value {
+        font-size: 1.1rem;
+    }
+}

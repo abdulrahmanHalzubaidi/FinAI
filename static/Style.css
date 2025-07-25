@@ -1,0 +1,24 @@
+/* Center content on smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .card img {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ensure cards have consistent height */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1;
+}

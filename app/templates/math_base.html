@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <!-- MathJax Configuration -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$']],
+          displayMath: [['$$', '$$']]
+        }// ,
+        // options: {
+        //   renderActions: {
+        //     addCopyText: [150, (math, doc) => {
+        //       const adaptor = doc.adaptor;
+        //       const text = adaptor.node('mjx-copytext', {'aria-hidden': true}, [
+        //         adaptor.text(math.start.delim + math.math + math.end.delim)
+        //       ]);
+        //       adaptor.append(math.typesetRoot, text);
+        //     }, '']
+        //   }
+        // }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <p>{{ cwd }}</p>
+    <p>CWD contents:</p>
+    <ul>
+      {% for item in ls %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <hr>
+    <h1>{{ heading }}</h1>
+    <div>
+        {{ content | safe }}
+    </div>
+</body>
+</html>

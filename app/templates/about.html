@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% block title %}About - FinAI{% endblock %}
+{% block content %}
+
+<style>
+    
+    /* Add padding to the bottom of the container */
+    .container {
+        padding-bottom: 20px;
+    }
+
+    .tool-icon {
+        font-size: 3rem;
+        color: #007bff;
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="display-4 mb-4 text-center">
+        About our Tools!
+    </h1>
+    <p class="lead text-center text-muted mb-5">Powerful tools to enhance your financial analysis and decision-making</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Financial Formula Calculator -->
+        <div class="col">
+            <div class="card h-100 tool-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-calculator tool-icon"></i>
+                    <h5 class="card-title">FinAI Calculator</h5>
+                    <p class="card-text">
+                        A comprehensive calculator that helps you compute essential financial metrics quickly and accurately.
+                        Compute complex calculations like Net Present Value (NPV), Return on Investment (ROI), Internal Rate of Return (IRR),
+                        Compound Annual Growth Rate (CAGR), and many more financial formulas with ease.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li>✓ Multiple Financial Metrics</li>
+                        <li>✓ Instant Calculations</li>
+                        <li>✓ User-Friendly Interface</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- File Upload & Summary -->
+        <div class="col">
+            <div class="card h-100 tool-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-chart-bar tool-icon"></i>
+                    <h5 class="card-title">FinAI Analyzer</h5>
+                    <p class="card-text">
+                        Easily upload CSV files and receive comprehensive data analysis.
+                        Our tool automatically processes your financial data, generating detailed summaries,
+                        identifying key trends, and providing actionable insights to support your financial decision-making.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li>✓ CSV File Support</li>
+                        <li>✓ Automatic Data Processing</li>
+                        <li>✓ Comprehensive Insights</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Dataset Analyzer -->
+        <div class="col">
+            <div class="card h-100 tool-card">
+                <div class="card-body text-center">
+                    <i class="fas fa-robot tool-icon"></i>
+                    <h5 class="card-title">Ask FinAI</h5>
+                    <p class="card-text">
+                        An advanced analysis tool that digs into your financial datasets.
+                        Leverage AI-powered insights to uncover hidden patterns,
+                        and trends. Ask specific questions about your data and receive intelligent,
+                        context-aware responses.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li>✓ AI-Powered Analysis</li>
+                        <li>✓ Interactive Prompts</li>
+                        <li>✓ Instant Responses</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h4 class="card-title text-center mb-4">
+                        <i class="fas fa-info-circle me-2"></i>How to Get Started
+                    </h4>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Create an Account</div>
+                                Sign up to access all our powerful financial tools
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Explore the Tools</div>
+                                Navigate through the Financial Calculator, File Upload, and Dataset Analyzer
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Start Using The Tools</div>
+                                Calculate formulas, upload your financial data, and analyze it to gain insights
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

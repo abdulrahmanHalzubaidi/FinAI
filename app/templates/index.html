@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="text-center mt-5">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="FinAI Logo" class="mb-4" width="100">
+    <h2>Welcome to FinAI</h2>
+    <p>Please sign up or log in to access our tools</p>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <a href="{{ url_for('signup') }}" class="btn btn-primary">Sign Up</a>
+        <a href="{{ url_for('login') }}" class="btn btn-secondary">Log In</a>
+    </div>
+</div>
+{% endblock %}

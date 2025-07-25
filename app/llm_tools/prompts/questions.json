@@ -1,0 +1,6 @@
+{
+  "1": "What does the information in this table represent?",
+  "2": "What are the columns in the dataframe? And what does each of them represent?",
+  "3": "How many rows and columns are there, are there any missing values?",
+  "4": "What are some summary statistics about the data? Ensure prior inspection and preprocessing of columns when necessary."
+}
